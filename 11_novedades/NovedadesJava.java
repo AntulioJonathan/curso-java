@@ -204,7 +204,7 @@ public class NovedadesJava {
         System.out.println("   try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {");
         System.out.println("       var task1 = scope.fork(() -> tareaA());");
         System.out.println("       var task2 = scope.fork(() -> tareaB());");
-        System.out.println("       scope.join();
+        System.out.println("       scope.join();");
         System.out.println("   }");
         
         // 4. Text Blocks mejorado
@@ -249,5 +249,15 @@ public class NovedadesJava {
         System.out.println("   - Inlining mejoras");
         System.out.println("   - Loop optimizations");
         System.out.println("   - Escape analysis mejorado");
+        
+        // 9. Nuevo void main y IO.print
+        System.out.println("\n9. void main + IO.print:");
+        System.out.println("   - `void main(String[] args) { ... }` como punto de entrada más simple");
+        System.out.println("   - `IO.print(...)` para impresión ligera sin System.out.println");
+        System.out.println("   Ejemplo (sintaxis preview):");
+        System.out.println("       void main(String[] args) {");
+        System.out.println("           IO.print(\"Hola desde Java 25\");");
+        System.out.println("       }");
+        System.out.println("   - `IO.readLine()` también facilita entrada de texto");
     }
 }
