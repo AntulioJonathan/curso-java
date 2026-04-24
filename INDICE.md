@@ -53,22 +53,27 @@
 |---------|-----------|
 | `09_fecha_hora/EjemplosFechaHora.java` | LocalDate, LocalTime, LocalDateTime, ZonedDateTime, Period, Duration, DateTimeFormatter |
 
-### Tema 10: Novedades Java 8-21 ✅
+### Tema 10: Módulos ✅
+| Archivo | Contenido |
+|---------|-----------|
+| `10_modulos/EjemplosModulos.java` | Module-info.java, exports, requires, opens, provides/uses |
+
+### Tema 11: Novedades Java 8-21 ✅
 | Archivo | Contenido |
 |---------|-----------|
 | `11_novedades/NovedadesJava.java` | var (Java 10), switch expressions (Java 12), records (Java 16), pattern matching (Java 21) |
 
-### Tema 11: JDBC ✅
+### Tema 12: JDBC ✅
 | Archivo | Contenido |
 |---------|-----------|
 | `12_jdbc/EjemplosJDBC.java` | Connection, Statement, PreparedStatement, ResultSet, transacciones (commit/rollback) |
 
-### Tema 12: Desarrollo Web ✅
+### Tema 13: Desarrollo Web ✅
 | Archivo | Contenido |
 |---------|-----------|
 | `13_web/EjemplosWeb.java` | Arquitectura MVC, Servlets conceptual, REST API, Spring Boot conceptual |
 
-### Tema 13: Buenas Prácticas ✅
+### Tema 14: Buenas Prácticas ✅
 | Archivo | Contenido |
 |---------|-----------|
 | `14_buenas_practicas/BuenasPracticas.java` | SOLID, Singleton, Factory, Builder, Optional, logging |
@@ -116,13 +121,16 @@
 - [ ] `EjemplosFechaHora.java` - Manipulación de fechas
 - [ ] `EjemplosGenericos.java` - Genéricos
 
-### Semana 6: Concurrencia + Web + BD
+### Semana 6: Módulos y Concurrencia
+- [ ] `EjemplosModulos.java` - Módulos (Java 9+)
 - [ ] `EjemplosConcurrencia.java` - Threads
+
+### Semana 7: Base de Datos + Web
 - [ ] `EjemplosJDBC.java` - Base de datos
 - [ ] `EjemplosWeb.java` - Desarrollo web
 
-### Semana 7: Revisión
-- [ ] `NovedadesJava.java` - Features nuevas
+### Semana 8: Revisión y Buenas Prácticas
+- [ ] `NovedadesJava.java` - Features nuevas (Java 8-21)
 - [ ] `BuenasPracticas.java` - Patrones y SOLID
 
 ---

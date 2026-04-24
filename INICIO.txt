@@ -55,7 +55,8 @@ curso-java/
 ├── 09_fecha_hora/
 │   └── EjemplosFechaHora.java .............. LocalDate, java.time
 │
-├── 10_modulos/ ............................ (Para ampliaciones)
+├── 10_modulos/
+│   └── EjemplosModulos.java .............. module-info, exports, requires
 │
 ├── 11_novedades/
 │   └── NovedadesJava.java .................. var, records, pattern matching
@@ -141,10 +142,13 @@ TEMA 8: Streams y Lambdas ⏱️ 40 minutos
 TEMA 9: Fecha y Hora ⏱️ 25 minutos
 □ EjemplosFechaHora.java
 
-TEMA 10: Novedades ⏱️ 20 minutos
+TEMA 10: Módulos ⏱️ 20 minutos
+□ EjemplosModulos.java
+
+TEMA 11: Novedades ⏱️ 20 minutos
 □ NovedadesJava.java
 
-TEMA 11-13: Avanzado ⏱️ 1.5 horas
+TEMA 12-14: Avanzado ⏱️ 1.5 horas
 □ EjemplosJDBC.java
 □ EjemplosWeb.java
 □ BuenasPracticas.java

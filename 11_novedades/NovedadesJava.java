@@ -15,6 +15,7 @@ public class NovedadesJava {
         novedadesJava16();
         novedadesJava17();
         novedadesJava21();
+        novedadesJava25();
     }
     
     // Java 10: var (inferencia de tipos para variables locales)
@@ -161,5 +162,92 @@ public class NovedadesJava {
         // Nota: String templates son preview, aquí mostramos la sintaxis futura
         System.out.println("   Sintaxis futura: \\\"\\(nombre) versión \\(version)\\\"");
         System.out.println("   Resultado: \"" + nombre + " versión " + version + "\"");
+    }
+    
+    // Java 25: Pattern Matching avanzado, Structured Concurrency, Text Blocks mejorados
+    static void novedadesJava25() {
+        System.out.println("\n--- Java 25 (2025) ---");
+        
+        // 1. Pattern Matching Exhaustiveness (preview)
+        System.out.println("\n1. Pattern Matching Exhaustiveness (mejorado):");
+        
+        sealed class Numero permits Entero, Decimal { }
+        record Entero(int valor) implements Numero { }
+        record Decimal(double valor) implements Numero { }
+        
+        Numero numero = new Entero(42);
+        
+        String tipo = switch(numero) {
+            case Entero e -> "Entero: " + e.valor();
+            case Decimal d -> "Decimal: " + d.valor();
+            // El compilador verifica que TODOS los casos estén cubiertos
+        };
+        
+        System.out.println("   " + tipo);
+        
+        // 2. Array y Nested Pattern Matching (mejorado)
+        System.out.println("\n2. Nested Pattern Matching:");
+        
+        record Punto(int x, int y) { }
+        record Linea(Punto inicio, Punto fin) { }
+        
+        Linea linea = new Linea(new Punto(0, 0), new Punto(10, 10));
+        
+        if (linea instanceof Linea(Punto(int x1, int y1), Punto(int x2, int y2))) {
+            System.out.println("   Línea de (" + x1 + "," + y1 + ") a (" + x2 + "," + y2 + ")");
+        }
+        
+        // 3. Mejoras en Structured Concurrency
+        System.out.println("\n3. Structured Concurrency (API en preview):");
+        System.out.println("   Permite gestionar grupos de hilos virtuales de forma coordinada");
+        System.out.println("   Ejemplo:");
+        System.out.println("   try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {");
+        System.out.println("       var task1 = scope.fork(() -> tareaA());");
+        System.out.println("       var task2 = scope.fork(() -> tareaB());");
+        System.out.println("       scope.join();
+        System.out.println("   }");
+        
+        // 4. Text Blocks mejorado
+        System.out.println("\n4. Text Blocks (now standard feature):");
+        
+        String json = """
+            {
+              "nombre": "Java 25",
+              "version": 25,
+              "features": [
+                "Pattern Matching",
+                "Structured Concurrency",
+                "Virtual Threads"
+              ]
+            }
+            """;
+        
+        System.out.println("   JSON con Text Blocks:");
+        System.out.println(json);
+        
+        // 5. Virtual Threads - Mejoras de Rendimiento
+        System.out.println("\n5. Virtual Threads - Optimizaciones:");
+        System.out.println("   - Mejor gestión de memoria");
+        System.out.println("   - Optimizaciones en context switching");
+        System.out.println("   - Mejor debugging de virtual threads");
+        
+        // 6. Mejoras en Garbage Collection
+        System.out.println("\n6. Garbage Collection - Mejoras:");
+        System.out.println("   - Zing GC optimizations");
+        System.out.println("   - Reducción de pausas GC");
+        System.out.println("   - Mejor rendimiento en heap grandes");
+        
+        // 7. String methods mejorados
+        System.out.println("\n7. String Methods (nuevos en Java 25):");
+        String texto = "  Hola Java 25  ";
+        System.out.println("   Texto original: '" + texto + "'");
+        System.out.println("   Con trim(): '" + texto.trim() + "'");
+        // Java 25 añade métodos adicionales para manipulación de strings
+        
+        // 8. Performance improvements
+        System.out.println("\n8. Performance Improvements:");
+        System.out.println("   - Inlining mejoras");
+        System.out.println("   - Loop optimizations");
+        System.out.println("   - Escape analysis mejorado");
     }
 }

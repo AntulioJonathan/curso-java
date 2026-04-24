@@ -39,7 +39,8 @@ Estructura:
 ├── 09_fecha_hora/            (1 archivo)
 │   └── EjemplosFechaHora.java
 │
-├── 10_modulos/               (sin ejemplos por falta de espacio)
+├── 10_modulos/               (1 archivo)
+│   └── EjemplosModulos.java
 │
 ├── 11_novedades/             (1 archivo)
 │   └── NovedadesJava.java
@@ -141,27 +142,34 @@ TOTAL: 18 ARCHIVOS JAVA + 2 MARKDOWN + 2 SCRIPTS
    - Parsing y formateo
    - Operaciones (suma, resta, comparación)
 
-10. NOVEDADES (1 archivo)
+10. MÓDULOS (1 archivo)
+    - module-info.java
+    - exports y requires
+    - opens para reflexión
+    - provides/uses (SPI)
+    - Mejores prácticas, migración
+
+11. NOVEDADES (1 archivo)
     - Java 10: var (inferencia de tipos)
     - Java 12: switch expressions
     - Java 14: records, pattern matching instanceof
     - Java 16: sealed classes
     - Java 21: virtual threads, pattern matching switch, record patterns
 
-11. JDBC (1 archivo)
+12. JDBC (1 archivo)
     - Connection, Statement, PreparedStatement
     - ResultSet
     - Transacciones (commit, rollback)
     - CRUD operations
     - Manejo de excepciones SQL
 
-12. DESARROLLO WEB (1 archivo)
+13. DESARROLLO WEB (1 archivo)
     - Estructura MVC
     - Conceptos REST
     - Spring Boot (conceptual)
     - Servidor TCP simple
 
-13. BUENAS PRÁCTICAS (1 archivo)
+14. BUENAS PRÁCTICAS (1 archivo)
     - Optional (evitar null)
     - SOLID (Single Responsibility, Open/Closed)
     - Patrones de diseño:
@@ -170,7 +178,7 @@ TOTAL: 18 ARCHIVOS JAVA + 2 MARKDOWN + 2 SCRIPTS
       * Builder
     - Logging
 
-14. PROYECTO INTEGRADOR (1 archivo)
+15. PROYECTO INTEGRADOR (1 archivo)
     - Sistema de Gestión de Biblioteca
     - Integración de múltiples conceptos:
       * Clases y herencia

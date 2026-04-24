@@ -76,16 +76,19 @@ java fundamentos.SintaxisBasica
 ### 9️⃣ **Fecha y Hora**
 - `EjemplosFechaHora.java` - LocalDate, LocalTime, ZonedDateTime, Period, Duration, formateo
 
-### 🔟 **Novedades**
+### 🔟 **Módulos**
+- `EjemplosModulos.java` - Module-info.java, exports, requires, opens, provides/uses
+
+### 1️⃣1️⃣ **Novedades**
 - `NovedadesJava.java` - var (Java 10), switch expressions, records, pattern matching, virtual threads
 
-### 1️⃣1️⃣ **JDBC**
+### 1️⃣2️⃣ **JDBC**
 - `EjemplosJDBC.java` - Conexiones, CRUD, PreparedStatement, transacciones
 
-### 1️⃣2️⃣ **Desarrollo Web**
+### 1️⃣3️⃣ **Desarrollo Web**
 - `EjemplosWeb.java` - Arquitectura MVC, Servlets, REST, Spring Boot conceptual
 
-### 1️⃣3️⃣ **Buenas Prácticas**
+### 1️⃣4️⃣ **Buenas Prácticas**
 - `BuenasPracticas.java` - SOLID, patrones (Singleton, Factory, Builder), Optional, logging
 
 ## 🎯 Ejemplos Destacados
