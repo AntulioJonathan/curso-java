@@ -68,6 +68,10 @@ public class EjemplosWeb {
         ejemploConceptoREST();
         ejemploSpringBootConceptual();
         ejemploServidorTCP();
+        ejemploJEEConceptos();
+        ejemploEJBConceptual();
+        ejemploJPAConceptual();
+        ejemploJMSConceptual();
     }
     
     // Ejemplo 1: Arquitectura Web
@@ -202,5 +206,139 @@ public class EjemplosWeb {
         } catch (IOException e) {
             System.out.println("Error del servidor: " + e.getMessage());
         }
+    }
+
+    // Ejemplo 5: Conceptos JEE (Jakarta EE)
+    static void ejemploJEEConceptos() {
+        System.out.println("--- Java EE / Jakarta EE ---");
+        System.out.println("Plataforma para aplicaciones empresariales");
+        System.out.println("\nTecnologías principales:");
+        System.out.println("• EJB (Enterprise Java Beans): Componentes de negocio");
+        System.out.println("• JPA (Java Persistence API): ORM estándar");
+        System.out.println("• JTA (Transaction API): Transacciones distribuidas");
+        System.out.println("• CDI (Contexts and Dependency Injection): Inyección de dependencias");
+        System.out.println("• JMS (Java Message Service): Mensajería asíncrona");
+        System.out.println("• JAX-RS: APIs RESTful");
+        System.out.println("• Servlets/JSP: Web tradicional");
+        System.out.println("\nContenedores: WildFly, GlassFish, Payara");
+        System.out.println("Alternativa moderna: Spring Framework (más ligero)\n");
+    }
+
+    // Ejemplo 6: EJB conceptual
+    static void ejemploEJBConceptual() {
+        System.out.println("--- Enterprise Java Beans (EJB) ---");
+        System.out.println("""
+            Tipos de EJB:
+            • Session Beans: Lógica de negocio
+              - Stateless: Sin estado, pool de instancias
+              - Stateful: Con estado, una instancia por cliente
+              - Singleton: Una instancia compartida
+
+            • Message-Driven Beans (MDB): Procesan mensajes JMS
+
+            Ejemplo conceptual:
+
+            @Stateless
+            public class CalculadoraEJB {
+                public double sumar(double a, double b) {
+                    return a + b;
+                }
+            }
+
+            @Singleton
+            public class ContadorEJB {
+                private int contador = 0;
+
+                public int incrementar() {
+                    return ++contador;
+                }
+            }
+            """);
+    }
+
+    // Ejemplo 7: JPA conceptual
+    static void ejemploJPAConceptual() {
+        System.out.println("--- Java Persistence API (JPA) ---");
+        System.out.println("""
+            ORM estándar para Java EE
+
+            @Entity
+            @Table(name = "usuarios")
+            public class Usuario {
+                @Id
+                @GeneratedValue(strategy = GenerationType.IDENTITY)
+                private Long id;
+
+                @Column(name = "nombre", nullable = false)
+                private String nombre;
+
+                @Column(name = "email", unique = true)
+                private String email;
+
+                // Getters y setters...
+            }
+
+            @Repository
+            public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+                List<Usuario> findByNombre(String nombre);
+                Optional<Usuario> findByEmail(String email);
+            }
+
+            Servicio:
+
+            @Service
+            public class UsuarioService {
+                @Autowired
+                private UsuarioRepository repository;
+
+                @Transactional
+                public Usuario guardar(Usuario usuario) {
+                    return repository.save(usuario);
+                }
+            }
+            """);
+    }
+
+    // Ejemplo 8: JMS conceptual
+    static void ejemploJMSConceptual() {
+        System.out.println("--- Java Message Service (JMS) ---");
+        System.out.println("""
+            Mensajería asíncrona
+
+            Producer (envía mensaje):
+
+            @Inject
+            private JMSContext context;
+
+            @Resource(lookup = "java:/jms/queue/MiCola")
+            private Queue queue;
+
+            public void enviarMensaje(String mensaje) {
+                context.createProducer().send(queue, mensaje);
+            }
+
+            Consumer (Message-Driven Bean):
+
+            @MessageDriven(
+                activationConfig = {
+                    @ActivationConfigProperty(
+                        propertyName = "destination",
+                        propertyValue = "java:/jms/queue/MiCola"
+                    )
+                }
+            )
+            public class ProcesadorMensajes implements MessageListener {
+                @Override
+                public void onMessage(Message message) {
+                    try {
+                        String contenido = message.getBody(String.class);
+                        System.out.println("Mensaje recibido: " + contenido);
+                        // Procesar mensaje...
+                    } catch (JMSException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            """);
     }
 }

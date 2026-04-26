@@ -8,6 +8,7 @@
 | `01_fundamentos/SintaxisBasica.java` | Tipos primitivos, variables, constantes, operadores aritméticos/relacionales/lógicos |
 | `01_fundamentos/EstructurasControl.java` | if/else, switch, for, while, do-while, for-each |
 | `01_fundamentos/ArraysYCadenas.java` | Arrays 1D/2D, ArrayList, LinkedList, String, StringBuilder |
+| `01_fundamentos/CasteoYConversiones.java` | Casteo implícito/explícito, conversiones primitivos/objetos, upcasting/downcasting, fechas, utilitarios |
 
 ### Tema 2: Orientación a Objetos ✅
 | Archivo | Contenido |
@@ -71,12 +72,33 @@
 ### Tema 13: Desarrollo Web ✅
 | Archivo | Contenido |
 |---------|-----------|
-| `13_web/EjemplosWeb.java` | Arquitectura MVC, Servlets conceptual, REST API, Spring Boot conceptual |
+| `13_web/EjemplosWeb.java` | Arquitectura MVC, Servlets conceptual, REST API, Spring Boot conceptual, JEE (EJB, JPA, JMS) |
 
-### Tema 14: Buenas Prácticas ✅
+### Tema 14: Aplicaciones de Escritorio (JSE) ✅
 | Archivo | Contenido |
 |---------|-----------|
-| `14_buenas_practicas/BuenasPracticas.java` | SOLID, Singleton, Factory, Builder, Optional, logging |
+| `14_desktop_apps/EjemploSwing.java` | Swing: JFrame, JPanel, JButton, JTextField, Layout Managers, ActionListener |
+| `14_desktop_apps/EjemploJavaFX.java` | JavaFX: Stage, Scene, VBox, Button, TextField, Event Handlers |
+| `14_desktop_apps/EjemploAWT.java` | AWT: Frame, Button, TextField, ActionListener (obsoleto) |
+
+### Tema 15: Librerías Importantes del JDK ✅
+| Archivo | Contenido |
+|---------|-----------|
+| `15_jdk_librerias/EjemplosMath.java` | BigDecimal, BigInteger para cálculos de alta precisión |
+| `15_jdk_librerias/EjemplosRegex.java` | Pattern, Matcher para expresiones regulares |
+| `15_jdk_librerias/EjemplosLogging.java` | Logger, ConsoleHandler, niveles de log |
+
+### Tema 16: Herramientas de Construcción ✅
+| Archivo | Contenido |
+|---------|-----------|
+| `16_maven_gradle/pom.xml` | Maven: POM, dependencias, plugins, perfiles |
+| `16_maven_gradle/build.gradle` | Gradle: DSL, dependencias, tareas, configuración |
+| `16_maven_gradle/README.md` | Comparativa Maven vs Gradle, comandos básicos |
+
+### Tema 17: Buenas Prácticas ✅
+| Archivo | Contenido |
+|---------|-----------|
+| `17_buenas_practicas/BuenasPracticas.java` | SOLID, Singleton, Factory, Builder, Optional, logging |
 
 ---
 

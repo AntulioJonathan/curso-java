@@ -1,0 +1,77 @@
+plugins {
+    id 'java'
+    id 'application'
+    // id 'org.springframework.boot' version '3.2.0' // Para Spring Boot
+}
+
+group = 'com.ejemplo'
+version = '1.0.0'
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+// Repositorios
+repositories {
+    mavenCentral()
+}
+
+// Dependencias
+dependencies {
+    // Testing
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+
+    // Spring Boot (ejemplo)
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.2.0'
+
+    // JSON processing
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+
+    // Logging
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    runtimeOnly 'ch.qos.logback:logback-classic:1.4.11'
+}
+
+// Configuración de la aplicación
+application {
+    mainClass = 'com.ejemplo.Main'
+}
+
+// Tareas personalizadas
+task helloWorld {
+    doLast {
+        println '¡Hola desde Gradle!'
+    }
+}
+
+// Configuración de testing
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+// Configuración de JAR
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'com.ejemplo.Main',
+            'Implementation-Title': project.name,
+            'Implementation-Version': project.version
+        )
+    }
+}
+
+// Multi-proyecto (ejemplo)
+// include 'modulo1', 'modulo2'
+
+// Perfiles/Entornos
+if (project.hasProperty('profile')) {
+    def profile = project.property('profile')
+    println "Perfil activo: $profile"
+
+    if (profile == 'dev') {
+        // Configuraciones específicas para desarrollo
+    } else if (profile == 'prod') {
+        // Configuraciones específicas para producción
+    }
+}

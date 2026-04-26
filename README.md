@@ -5,7 +5,7 @@ Este repositorio contiene **ejemplos prácticos de código** cubriendo todo el t
 ## 📚 Estructura
 
 ```
-01_fundamentos/          - Sintaxis básica, tipos, operadores, arrays, cadenas
+01_fundamentos/          - Sintaxis básica, tipos, operadores, arrays, cadenas, casteo
 02_poo/                  - Clases, herencia, interfaces, enumerados
 03_excepciones/          - Manejo de excepciones y excepciones personalizadas
 04_colecciones/          - List, Set, Map, ordenación
@@ -17,8 +17,11 @@ Este repositorio contiene **ejemplos prácticos de código** cubriendo todo el t
 10_modulos/              - Definición de módulos (Java 9+)
 11_novedades/            - Características destacadas por versión (Java 8-21)
 12_jdbc/                 - Conexión a BD, CRUD, transacciones
-13_web/                  - Servlets, REST, Spring Boot conceptual
-14_buenas_practicas/     - SOLID, patrones, Optional, logging
+13_web/                  - Servlets, REST, Spring Boot, JEE (EJB, JPA, JMS)
+14_desktop_apps/         - Swing, JavaFX, AWT para aplicaciones de escritorio
+15_jdk_librerias/        - BigDecimal, regex, logging, otras librerías JDK
+16_maven_gradle/         - Configuración Maven y Gradle
+17_buenas_practicas/     - SOLID, patrones, Optional, logging
 ```
 
 ## 🚀 Cómo usar los ejemplos
@@ -47,6 +50,7 @@ java fundamentos.SintaxisBasica
 - `SintaxisBasica.java` - Variables, tipos, operadores
 - `EstructurasControl.java` - if, switch, for, while
 - `ArraysYCadenas.java` - Arrays, ArrayList, String, StringBuilder
+- `CasteoYConversiones.java` - Casteo implícito/explícito, conversiones, upcasting/downcasting
 
 ### 2️⃣ **POO**
 - `Persona.java` - Clases, atributos, métodos, constructores
@@ -86,9 +90,24 @@ java fundamentos.SintaxisBasica
 - `EjemplosJDBC.java` - Conexiones, CRUD, PreparedStatement, transacciones
 
 ### 1️⃣3️⃣ **Desarrollo Web**
-- `EjemplosWeb.java` - Arquitectura MVC, Servlets, REST, Spring Boot conceptual
+- `EjemplosWeb.java` - Arquitectura MVC, Servlets, REST, Spring Boot, JEE (EJB, JPA, JMS)
 
-### 1️⃣4️⃣ **Buenas Prácticas**
+### 1️⃣4️⃣ **Aplicaciones de Escritorio**
+- `EjemploSwing.java` - Swing: componentes, layouts, eventos
+- `EjemploJavaFX.java` - JavaFX: escena, nodos, binding
+- `EjemploAWT.java` - AWT: componentes básicos (obsoleto)
+
+### 1️⃣5️⃣ **Librerías JDK**
+- `EjemplosMath.java` - BigDecimal, BigInteger
+- `EjemplosRegex.java` - Pattern, Matcher
+- `EjemplosLogging.java` - Logger, niveles de log
+
+### 1️⃣6️⃣ **Herramientas de Construcción**
+- `pom.xml` - Configuración Maven
+- `build.gradle` - Configuración Gradle
+- `README.md` - Comparativa y comandos
+
+### 1️⃣7️⃣ **Buenas Prácticas**
 - `BuenasPracticas.java` - SOLID, patrones (Singleton, Factory, Builder), Optional, logging
 
 ## 🎯 Ejemplos Destacados
