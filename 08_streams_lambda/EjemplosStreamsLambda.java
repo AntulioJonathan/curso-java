@@ -210,7 +210,7 @@ public class EjemplosStreamsLambda {
     static void ejemploOptional() {
         System.out.println("\n--- Optional ---");
         
-        List<String> nombres = Arrays.asList("Ana", "Carlos", "Diana");
+        List<String> nombres = Arrays.asList("Ana", "Zarlos", "Diana");
         
         // Optional.of y isPresent
         Optional<String> primero = nombres.stream().findFirst();
